@@ -4,7 +4,7 @@ import Nav from '~/components/Nav'
 
 type Props = {}
 
-const create: NextPage<Props> = (props: Props) => {
+const Create: NextPage<Props> = (props: Props) => {
   return (
     <div className="h-full">
       <Nav />
@@ -85,4 +85,4 @@ const create: NextPage<Props> = (props: Props) => {
   )
 }
 
-export default create
+export default Create

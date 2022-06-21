@@ -43,11 +43,6 @@ const Nav = (props: Props) => {
       <div className="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
         <div className="text-sm lg:flex-grow">
           <Link
-            href="/find"
-          >
-            <a className={openStyle}>Find Polls</a>
-          </Link>
-          <Link
             href="/create"
           >
             <a className={openStyle}>Create Polls</a>
