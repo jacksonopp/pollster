@@ -1,21 +1,14 @@
-import { trpc } from '../utils/trpc';
+import Nav from '~/components/Nav';
 import { NextPageWithLayout } from './_app';
-import Link from 'next/link';
 
 const IndexPage: NextPageWithLayout = () => {
-  const utils = trpc.useContext();
-  const postsQuery = trpc.useQuery(['post.all']);
-  const addPost = trpc.useMutation('post.add', {
-    async onSuccess() {
-      // refetches posts after a post is added
-      await utils.invalidateQueries(['post.all']);
-    },
-  });
+
 
   return (
-    <>
+    <div className='h-screen'>
+      <Nav />
       <p>hey</p>
-    </>
+    </div>
   );
 };
 

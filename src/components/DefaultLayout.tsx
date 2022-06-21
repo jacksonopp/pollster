@@ -13,14 +13,9 @@ export const DefaultLayout = ({ children }: DefaultLayoutProps) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Nav />
-
-      <header className="flex flex-col items-center justify-center">
-        <h1 className="text-6xl font-bold">Pollster</h1>
-        <p className='text-2xl'>Create your own custom poll!</p>
-      </header>
-
-      <main>{children}</main>
+      <main>
+        {children}
+      </main>
 
       {process.env.NODE_ENV !== 'production' && (
         <ReactQueryDevtools initialIsOpen={false} />

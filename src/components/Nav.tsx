@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 
 type Props = {};
@@ -22,7 +23,7 @@ const Nav = (props: Props) => {
     // A navbar component using tailwindcss
     <nav className="flex items-center justify-between flex-wrap bg-teal-500 p-6 mb-4">
       <div className="flex items-center flex-shrink-0 text-white mr-6">
-        <span className="font-semibold text-xl tracking-tight">Pollster</span>
+        <Link href='/'><a className="font-semibold text-xl tracking-tight">Pollster</a></Link>
       </div>
       <div className="block lg:hidden">
         <button
@@ -41,18 +42,16 @@ const Nav = (props: Props) => {
       </div>
       <div className="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
         <div className="text-sm lg:flex-grow">
-          <a
-            href="#responsive-header"
-            className={openStyle}
+          <Link
+            href="/find"
           >
-            Home
-          </a>
-          <a
-            href="#responsive-header"
-            className={openStyle}
+            <a className={openStyle}>Find Polls</a>
+          </Link>
+          <Link
+            href="/create"
           >
-            About
-          </a>
+            <a className={openStyle}>Create Polls</a>
+          </Link>
         </div>
       </div>
     </nav>
